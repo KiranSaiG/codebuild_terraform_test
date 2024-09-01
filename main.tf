@@ -3,6 +3,16 @@ provider "aws" {
   profile = "KiranSai"
 }
 
+# store the terraform state file in s3
+terraform {
+  backend "s3" {
+    bucket  = "codebuild-testing-25992"
+    key     = "build/terraform.tfstate"
+    region  = "us-east-1"
+    profile = "KiranSai"
+  }
+}
+
 resource "aws_iam_role" "my_role" {
   name = "my_role"
   assume_role_policy = jsonencode({
