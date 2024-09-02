@@ -48,6 +48,6 @@ resource "aws_s3_bucket" "my_bucket" {
   bucket = "25992-s3bucket-codebuild"
 }
 
-resource "aws_s3_bucket" "my_bucket" {
+resource "aws_s3_bucket" "my_bucket_2" {
   bucket = "25992-s3bucket-codebuild-2"
 }
